@@ -4,21 +4,21 @@
     <div class="products">
 
       <div class="product">
-        <div class="product-image" style="background-image: url('https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg');"></div>
-        <h4>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h4>
-        <p class="price">R$ 109.95</p>
+        <div class="product-image" style="background-image: url('https://m.media-amazon.com/images/I/41-RhQeujUL.__AC_SY445_SX342_QL70_ML2_.jpg');"></div>
+        <h4>Macbook Air</h4>
+        <p class="price">R$ 7.000,00</p>
         <button>Adicionar ao carrinho</button>
       </div>
       <div class="product">
-        <div class="product-image" style="background-image: url('https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg');"></div>
-        <h4>Mens Casual Premium Slim Fit T-Shirts </h4>
-        <p class="price">R$ 22.30</p>
+        <div class="product-image" style="background-image: url('https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1617492405000');"></div>
+        <h4>Samsung Galaxy S21 Ultra </h4>
+        <p class="price">R$ 6.000,00</p>
         <button>Adicionar ao carrinho</button>
       </div>
       <div class="product">
-        <div class="product-image" style="background-image: url('https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg');"></div>
-        <h4>Mens Cotton Jacket</h4>
-        <p class="price">R$ 55.99</p>
+        <div class="product-image" style="background-image: url('https://m.media-amazon.com/images/I/615TJBAXXbL._AC_SX679_.jpg');"></div>
+        <h4>Computador Desktop iMac</h4>
+        <p class="price">R$ 12.000,00</p>
         <button>Adicionar ao carrinho</button>
       </div>
     </div>
@@ -28,15 +28,17 @@
 <script>
 
 export default {
-  name: 'home-component',
+  name: 'home-view',
   data() {
     return {
-      
+
     }
   },
 
-  methods: {
-   
+  computed: {
+    products () {
+      return this.$store.state.products
+    }
   }
 }
 </script>
