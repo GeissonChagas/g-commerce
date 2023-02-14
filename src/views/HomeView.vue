@@ -9,18 +9,6 @@
         <p class="price">R$ 7.000,00</p>
         <button>Adicionar ao carrinho</button>
       </div>
-      <div class="product">
-        <div class="product-image" style="background-image: url('https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1617492405000');"></div>
-        <h4>Samsung Galaxy S21 Ultra </h4>
-        <p class="price">R$ 6.000,00</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-      <div class="product">
-        <div class="product-image" style="background-image: url('https://m.media-amazon.com/images/I/615TJBAXXbL._AC_SX679_.jpg');"></div>
-        <h4>Computador Desktop iMac</h4>
-        <p class="price">R$ 12.000,00</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
     </div>
   </div>
 </template>
