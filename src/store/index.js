@@ -15,7 +15,7 @@ export default createStore({
   actions: {
     loadProducts({ commit }) {
       axios
-      .get('https://geissonchagas.github.io/Minhas-API-s/gcommerce.json')
+      .get('https://fakestoreapi.com/products/')
         .then(response => {
           commit('loadProducts', response.data)
         })
@@ -24,3 +24,4 @@ export default createStore({
   modules: {
   }
 })
+

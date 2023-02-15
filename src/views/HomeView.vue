@@ -2,11 +2,10 @@
   <HeaderComponent />
   <div class="home">
     <div class="products">
-
-      <div class="product">
-        <div class="product-image" style="background-image: url('https://m.media-amazon.com/images/I/41-RhQeujUL.__AC_SY445_SX342_QL70_ML2_.jpg');"></div>
-        <h4>Macbook Air</h4>
-        <p class="price">R$ 7.000,00</p>
+      <div v-for="(product, index) in products" :key="index" class="product">
+        <div class="product-image" :style="{ backgroundImage: 'url(' + product.image + ')'}"></div>
+        <h4>{{ product.title }}</h4>
+        <p class="price">R$ {{ product.price }}</p>
         <button>Adicionar ao carrinho</button>
       </div>
     </div>
@@ -14,22 +13,19 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 
 export default {
   name: 'home-view',
-  data() {
-    return {
-
-    }
-  },
-
   computed: {
-    products () {
-      return this.$store.state.products
-    }
+    ...mapState(['products'])
+  },
+  created() {
+    this.$store.dispatch('loadProducts');
   }
 }
 </script>
+
 
 <style lang="scss">
 
