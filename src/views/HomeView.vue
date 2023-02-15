@@ -1,27 +1,39 @@
 <template>
-  <HeaderComponent />
-  <div class="home">
-    <div class="products">
-      <div v-for="(product, index) in products" :key="index" class="product">
-        <div class="product-image" :style="{ backgroundImage: 'url(' + product.image + ')'}"></div>
-        <h4>{{ product.title }}</h4>
-        <p class="price">R$ {{ product.price }}</p>
-        <button>Adicionar ao carrinho</button>
+  <div>
+    <HeaderComponent />
+    <div class="home">
+      <div class="products">
+        <div v-for="(product, index) in products" :key="index" class="product">
+          <div class="product-image" :style="{ backgroundImage: 'url(' + product.image + ')'}"></div>
+          <h4>{{ product.title }}</h4>
+          <p class="price">R$ {{ product.price.toFixed(2) }}</p>
+          <button @click="addToBag(product)">Adicionar ao carrinho</button>
+        </div>
       </div>
     </div>
   </div>
+  {{  productsInBag.length }}
 </template>
 
 <script>
-import { mapState } from 'vuex';
-
 export default {
   name: 'home-view',
   computed: {
-    ...mapState(['products'])
+    products(){
+      return this.$store.state.products
+    },
+    productsInBag(){
+      return this.$store.state.productsInBag
+    }
   },
   created() {
     this.$store.dispatch('loadProducts');
+  },
+  methods: {
+    addToBag(product){
+      product.quantity = 1;
+      this.$store.dispatch('addToBag', product)
+    }
   }
 }
 </script>
