@@ -25,7 +25,7 @@ export default createStore({
         })
     },
     addToBag({ commit }, product) {
-      commit('addToBag', product)
+      commit('addToBag', product);
     }
   },
   modules: {
