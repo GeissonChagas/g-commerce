@@ -67,11 +67,12 @@ export default {
 .basket {
   padding: 60px 0;
   .items {
-    max-width: 800px;
+    max-width: 70vw;
     margin: auto;
     .item {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 40px 20px;
       border-bottom: 1px solid lightgrey;
       position: relative;
@@ -142,12 +143,19 @@ export default {
       box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.15) inset;
     }
   @media screen and (max-width: 480px ) {
+    .item{
+      width:90vw;
+    }
+    .items{
+      width: 100%;
+      margin: 0;
+    }
+    .amount{
+      display: none;
+    }
     .price{
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: 40%;
-      align-items: center;
+      flex-wrap: nowrap;
     }
   }
 }
