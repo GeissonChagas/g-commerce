@@ -30,7 +30,6 @@
       </div>
     </div>
   </div>
-  {{ productsInBag.length }}
 </template>
 
 <script>
@@ -103,24 +102,23 @@ export default {
       }
 
       button {
-        color: #fff;
-        background-color: #007bff;
+        color: #007bff;
+        background-color: transparent;
         border: 1px solid #007bff;
-        border-radius: 100px;
-        font-weight: 400;
+        border-radius: 5px;
+        font-weight: 700;
         text-align: center;
         padding: 8px 16px;
         cursor: pointer;
 
         &:hover {
-          opacity: 0.8;
+          opacity: 0.7;
         }
 
         &.remove {
           background-color: transparent;
-          border: none;
-          color: black;
-          text-decoration: underline;
+          border: 1px solid #555;
+          color: #FF0000;
         }
       }
     }

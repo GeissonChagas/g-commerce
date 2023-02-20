@@ -1,35 +1,48 @@
 <template>
   <div id="nav">
-    <router-link to="/">Início</router-link> -
-    <router-link to="/basket">Carrinho ({{ this.productsInBag.length }})</router-link> 
+    <router-link to="/">Início</router-link>  | 
+    <router-link to="/basket"
+      >Carrinho ({{ this.productsInBag.length }})</router-link>
   </div>
-  <router-view/>
+  <div>
+    <BannerComponent />
+    <router-view />
+  </div>
+  <div>
+    <FooterComponent />
+  </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
+import BannerComponent from './components/BannerComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 
 export default {
   created() {
-    this.$store.dispatch('loadProducts')
+    this.$store.dispatch("loadProducts");
+    this.$store.dispatch("loadBag");
   },
-  computed: mapState([
-    'productsInBag'
-  ])
-}
+  components: {
+    BannerComponent,
+    FooterComponent
+  },
+  computed: mapState(["productsInBag"]),
+};
 </script>
 
 
 <style lang="scss">
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  max-width: 1280px;
-  margin: 80px auto;
+  max-width: 100vw;
+  margin: 80px auto 0 auto;
 }
 
 #nav {
@@ -40,15 +53,17 @@ export default {
   left: 0;
   width: 100%;
   text-align: center;
-  background-color: rgb(37, 37, 37);
+  background-image: url(../public/img/header.jpeg);
+  height: 30px;
   color: white;
-
 
   a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 
     &.router-link-exact-active {
+      font-weight: 700;
       color: #007bff;
     }
   }
