@@ -72,17 +72,18 @@ export default {
     .item {
       display: flex;
       justify-content: space-between;
-      padding: 40px 0;
+      padding: 40px 20px;
       border-bottom: 1px solid lightgrey;
       position: relative;
 
       .remove {
         position: absolute;
         top: 8px;
-        right: 0;
-        font-size: 11px;
+        right: 20px;
+        font-size: 12px;
         text-decoration: underline;
         cursor: pointer;
+        color: #FF0000;
       }
 
       .quantity-area {
@@ -96,6 +97,13 @@ export default {
           justify-content: center;
           align-items: center;
           cursor: pointer;
+          background: #555;
+          color: #fff;
+          border: none;
+        }
+
+        button:hover{
+          opacity: 0.7;
         }
 
         .quantity {
@@ -129,6 +137,9 @@ export default {
       font-weight: 700;
       text-align: center;
       margin-top: 8px;
+      border: 1px solid #888;
+      padding: 1rem;
+      box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.15) inset;
     }
 }
 </style>

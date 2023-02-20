@@ -79,6 +79,9 @@ export default {
 
       &.inBag {
         border: 1px solid #007bff;
+        box-shadow: 0 0 20px 10px rgba(47, 130, 255, 0.5) inset;
+
+
       }
 
       .product-image {
