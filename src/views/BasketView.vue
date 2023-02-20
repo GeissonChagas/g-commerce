@@ -141,5 +141,14 @@ export default {
       padding: 1rem;
       box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.15) inset;
     }
+  @media screen and (max-width: 480px ) {
+    .price{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 40%;
+      align-items: center;
+    }
+  }
 }
 </style>
