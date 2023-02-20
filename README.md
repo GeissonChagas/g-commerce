@@ -5,8 +5,9 @@
   - Duas páginas: uma para a escolha de produtos e outra para o carrinho de compras;
   - Utilização do Vue Router para navegação entre as páginas;
   - Utilização do Vuex para gerenciamento de estado da aplicação;
-  - Utilizar a "Fake Store API" para simular produtos; 
-  - Utilizar o Axios para fazer a requisição da API.
+  - Criar uma simulação de API através de um link; 
+  - Utilizar o Axios para fazer a requisição da API;
+  - Salvar dados no localStorage.
   
 ## Instalação: 
    1. Clone o repositório utilizando um terminal de sua preferência com o seguinte comando: `$ git clone https://github.com/<seu_usuario>/g-commerce.git`;
@@ -17,5 +18,13 @@
 OBS: É necessário ter o Node instalado em sua máquina.
 
 ## Prints e Vídeos: 
-  - Projeto ainda em andamento...
- 
+
+  ### Destop:
+    
+![gcommerce-desktop1](https://user-images.githubusercontent.com/115817581/220102486-8eefb941-ca56-4451-9538-99e8347a6713.png)
+![gcommerce-desktop2](https://user-images.githubusercontent.com/115817581/220102519-a824fd53-3482-440b-9f64-21f023b323fd.png)
+
+  ### Responsividade:
+
+https://user-images.githubusercontent.com/115817581/220102658-8d15264b-fd60-40a0-b9a9-7c6489a5145b.mp4
+
